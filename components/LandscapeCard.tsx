@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-const Landscape_Card = () => {
+const LandscapeCard = () => {
     return (
         <>
         <div className="col-lg-6">
@@ -51,4 +51,4 @@ const Landscape_Card = () => {
     </>
     )
 }
-export default Landscape_Card
+export default LandscapeCard

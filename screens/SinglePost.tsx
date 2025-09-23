@@ -1,12 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
-import CommandSection from './CommandSection'
-import CommandForm from './CommandForm'
-import SocialFollow from '@/app/components/SocialFollow'
-import Advertisement from '@/app/components/Advertisement'
-import Trending from '@/app/components/Trending'
-import Breaking_news from '@/app/components/Breaking_news'
-import Tag from '@/app/components/Tag'
+import CommandSection from '@/components/CommandSection'
+import SocialFollow from '@/components/SocialFollow'
+import Advertisement from '@/components/Advertisement'
+import Tag from '@/components/Tag'
+import BreakingNews from '@/components/BreakingNews'
+import Trending from '@/components/Trending'
+import CommandForm from '@/components/CommandForm'
 
 const SinglePost = () => {
   return (
@@ -79,7 +79,7 @@ const SinglePost = () => {
                     <SocialFollow />
                     <Advertisement />
                     <Trending />
-                    <Breaking_news />
+                    <BreakingNews />
                     <Tag />
                 </div>
             </div>

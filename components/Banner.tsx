@@ -49,8 +49,7 @@ const Banner = () => {
                                     src={slides[currentSlide].src} 
                                     style={{ objectFit: 'cover' }} 
                                     alt="Banner" 
-                                    width={900} 
-                                    height={500} 
+                                    fill
                                 />
                                 <div className="overlay">
                                     <div className="mb-2">

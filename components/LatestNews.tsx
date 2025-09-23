@@ -1,15 +1,15 @@
 import React from 'react'
 import Image from 'next/image'
-import Trending from './Trending'
-import Advertisement from './Advertisement'
-import Breaking_news from './Breaking_news'
-import Follow_Us from './Follow_Us'     
-import Tag from './Tag'
-import Latest_Card from './Latest_card'
-import Landscape_Card from './Landscape_Card'
-import Landscape_Big_Card from './Landscape_Big_Card'
+import Trending from '@/components/Trending'  
+import Advertisement from '@/components/Advertisement'
+import Tag from '@/components/Tag'
+import BreakingNews from '@/components/BreakingNews'
+import SocialFollow from '@/components/SocialFollow'
+import LatestCard from '@/components/LatestCard'
+import LandscapeCard from '@/components/LandscapeCard'
+import LandscapeBigCard from '@/components/LandscapeBigCard'
 
-const Latest_News = () => {
+const LatestNews = () => {
     return (
         <div className="container-fluid">
             <div className="container">
@@ -22,7 +22,7 @@ const Latest_News = () => {
                                     <a className="text-secondary font-weight-medium text-decoration-none" href="">View All</a>
                                 </div>
                             </div>
-                            <Latest_Card />
+                            <LatestCard />
                            
                             <div className="col-lg-12 mb-3">
                                 <a href=""><Image className="img-fluid w-100" src="/images/ads-728x90.png" alt="" width={728} height={90} /></a>
@@ -120,23 +120,22 @@ const Latest_News = () => {
                             <div className="col-lg-12 mb-3">
                                 <a href=""><Image className="img-fluid w-100" src="/images/ads-728x90.png" alt="" width={728} height={90} /></a>
                             </div>
-                            <Landscape_Big_Card />
-                           
-                            <Landscape_Card />
+                            <LandscapeBigCard />
+                            <LandscapeCard />
 
                         </div>
                     </div>
 
                     <div className="col-lg-4">
-                        <Follow_Us />
+                        <SocialFollow />
                         <Trending />
-                        <Breaking_news />
-                        <Tag />
+                        <BreakingNews />
                         <Advertisement />
+                        <Tag />
                     </div>
                 </div>
             </div>
         </div>
     )
 }
-export default Latest_News
+export default LatestNews

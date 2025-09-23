@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Trending = () => {
+const SinglePageTrending = () => {
   return (
     <div className="container-fluid mt-5 mb-3 pt-3">
         <div className="container">
@@ -23,4 +23,4 @@ const Trending = () => {
   )
 }
 
-export default Trending
+export default SinglePageTrending

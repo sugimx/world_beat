@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-const Follow_Us = () => {
+const FollowUs = () => {
     return (
         <div className="mb-3">
         <div className="section-title mb-0">
@@ -36,4 +36,4 @@ const Follow_Us = () => {
     </div>
     )
 }
-export default Follow_Us
+export default FollowUs

@@ -1,11 +1,11 @@
 import React from 'react'
-import Trending from './Trending'
-import SinglePost from './SinglePost'
+import SinglePageTrending from '@/components/SinglePageTrending'
+import SinglePost from '@/screens/SinglePost'
 
 const page = () => {
   return (
     <>
-      <Trending />
+      <SinglePageTrending />
       <SinglePost />
     </>
   )

@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
-import Featured_Card from './Featured_Card'
+import FeaturedCard from '@/components/FeaturedCard'
 
-const Featured_News = () => {
+const FeaturedNews = () => {
     return (
         <>
     <div className="container-fluid pt-5 mb-3">
@@ -11,14 +11,14 @@ const Featured_News = () => {
                 <h4 className="m-0 text-uppercase font-weight-bold">Featured News</h4>
             </div>
             <div className="row">
-                <Featured_Card />
-                <Featured_Card />
-                <Featured_Card />
-                <Featured_Card />
+                <FeaturedCard />
+                <FeaturedCard />
+                <FeaturedCard />
+                <FeaturedCard />
             </div>
         </div>
     </div>
         </>
     )
 }
-export default Featured_News
+export default FeaturedNews
