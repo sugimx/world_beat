@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import { FaSearch } from "react-icons/fa"
 
 const Navbar = () => {
@@ -14,7 +15,7 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
                     <div className="navbar-nav mr-auto py-0">
                         <a href="index.html" className="nav-item nav-link active">Home</a>
-                        <a href="category.html" className="nav-item nav-link">Category</a>
+                        <Link href="/category" className="nav-item nav-link">Category</Link>
                         <a href="single.html" className="nav-item nav-link">Single News</a>
                         <div className="nav-item dropdown">
                             <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>

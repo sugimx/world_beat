@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-const BreakingNews = () => {
+const NewsLetter = () => {
     return (
         <div className="mb-3">
         <div className="section-title mb-0">
@@ -20,4 +20,4 @@ const BreakingNews = () => {
     </div>
     )
 }
-export default BreakingNews
+export default NewsLetter

@@ -5,7 +5,7 @@ const Trending = () => {
     return (
         <div className="mb-3">
         <div className="section-title mb-0">
-            <h4 className="m-0 text-uppercase font-weight-bold">Tranding News</h4>
+            <h4 className="m-0 text-uppercase font-weight-bold">Trending News</h4>
         </div>
         <div className="bg-white border border-top-0 p-3">
             <div className="d-flex align-items-center bg-white mb-3" style={{height: '110px'}}>

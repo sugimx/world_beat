@@ -3,11 +3,13 @@ import Image from 'next/image'
 import Trending from '@/components/Trending'  
 import Advertisement from '@/components/Advertisement'
 import Tag from '@/components/Tag'
-import BreakingNews from '@/components/BreakingNews'
+import NewsLetter from '@/components/NewsLetter'
 import SocialFollow from '@/components/SocialFollow'
 import LatestCard from '@/components/LatestCard'
 import LandscapeCard from '@/components/LandscapeCard'
 import LandscapeBigCard from '@/components/LandscapeBigCard'
+import CategoryHeader from './CategoryHeader'
+import VerticalAdsBanner from './VerticalAdsBanner'
 
 const LatestNews = () => {
     return (
@@ -16,17 +18,10 @@ const LatestNews = () => {
                 <div className="row">
                     <div className="col-lg-8">
                         <div className="row">
-                            <div className="col-12">
-                                <div className="section-title">
-                                    <h4 className="m-0 text-uppercase font-weight-bold">Latest News</h4>
-                                    <a className="text-secondary font-weight-medium text-decoration-none" href="">View All</a>
-                                </div>
-                            </div>
+                            <CategoryHeader name={"Latest News"} />
                             <LatestCard />
                            
-                            <div className="col-lg-12 mb-3">
-                                <a href=""><Image className="img-fluid w-100" src="/images/ads-728x90.png" alt="" width={728} height={90} /></a>
-                            </div>
+                            <VerticalAdsBanner />
                             <div className="col-lg-6">
                                 <div className="position-relative mb-3">
                                     <Image className="img-fluid w-100" src="/images/news-700x435-3.jpg" style={{ objectFit: 'cover' }} width={700} height={435} alt="News" />
@@ -129,7 +124,7 @@ const LatestNews = () => {
                     <div className="col-lg-4">
                         <SocialFollow />
                         <Trending />
-                        <BreakingNews />
+                        <NewsLetter />
                         <Advertisement />
                         <Tag />
                     </div>

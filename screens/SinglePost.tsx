@@ -4,7 +4,7 @@ import CommandSection from '@/components/CommandSection'
 import SocialFollow from '@/components/SocialFollow'
 import Advertisement from '@/components/Advertisement'
 import Tag from '@/components/Tag'
-import BreakingNews from '@/components/BreakingNews'
+import BreakingNews from '@/components/NewsLetter'
 import Trending from '@/components/Trending'
 import CommandForm from '@/components/CommandForm'
 
