@@ -1,5 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
+import { FaTwitter } from "react-icons/fa"
+import { FaFacebookF } from "react-icons/fa"
+import { FaLinkedinIn } from "react-icons/fa"
+import { FaInstagram } from "react-icons/fa"
+import { FaYoutube } from "react-icons/fa"
 
 const Footer = () => {
     return (
@@ -12,11 +17,21 @@ const Footer = () => {
                 <p className="font-weight-medium"><i className="fa fa-envelope mr-2"></i>info@example.com</p>
                 <h6 className="mt-4 mb-3 text-white text-uppercase font-weight-bold">Follow Us</h6>
                 <div className="d-flex justify-content-start">
-                    <a className="btn btn-lg btn-secondary btn-lg-square mr-2" href="#"><i className="fab fa-twitter"></i></a>
-                    <a className="btn btn-lg btn-secondary btn-lg-square mr-2" href="#"><i className="fab fa-facebook-f"></i></a>
-                    <a className="btn btn-lg btn-secondary btn-lg-square mr-2" href="#"><i className="fab fa-linkedin-in"></i></a>
-                    <a className="btn btn-lg btn-secondary btn-lg-square mr-2" href="#"><i className="fab fa-instagram"></i></a>
-                    <a className="btn btn-lg btn-secondary btn-lg-square" href="#"><i className="fab fa-youtube"></i></a>
+                    <a className="btn btn-lg btn-secondary btn-lg-square mr-2" href="#">
+                        <FaTwitter />
+                    </a>
+                    <a className="btn btn-lg btn-secondary btn-lg-square mr-2" href="#">
+                        <FaFacebookF />
+                    </a>
+                    <a className="btn btn-lg btn-secondary btn-lg-square mr-2" href="#">
+                        <FaLinkedinIn />
+                    </a>
+                    <a className="btn btn-lg btn-secondary btn-lg-square mr-2" href="#">
+                        <FaInstagram />
+                    </a>
+                    <a className="btn btn-lg btn-secondary btn-lg-square" href="#">
+                        <FaYoutube />
+                    </a>
                 </div>
             </div>
             <div className="col-lg-3 col-md-6 mb-5">
@@ -73,22 +88,22 @@ const Footer = () => {
                 <h5 className="mb-4 text-white text-uppercase font-weight-bold">Flickr Photos</h5>
                 <div className="row">
                     <div className="col-4 mb-3">
-                        <a href=""><Image className="w-100" src="/images/news-110x110-1.jpg" alt="" width={110} height={110} /></a>
+                        <a href=""><Image className="w-auto" src="/images/news-110x110-1.jpg" alt="" width={110} height={110} /></a>
                     </div>
                     <div className="col-4 mb-3">
-                        <a href=""><Image className="w-100" src="/images/news-110x110-2.jpg" alt="" width={110} height={110} /></a>
+                        <a href=""><Image className="w-auto" src="/images/news-110x110-2.jpg" alt="" width={110} height={110} /></a>
                     </div>
                     <div className="col-4 mb-3">
-                        <a href=""><Image className="w-100" src="/images/news-110x110-3.jpg" alt="" width={110} height={110} /></a>
+                        <a href=""><Image className="w-auto" src="/images/news-110x110-3.jpg" alt="" width={110} height={110} /></a>
                     </div>
                     <div className="col-4 mb-3">
-                        <a href=""><Image className="w-100" src="/images/news-110x110-4.jpg" alt="" width={110} height={110} /></a>
+                        <a href=""><Image className="w-auto" src="/images/news-110x110-4.jpg" alt="" width={110} height={110} /></a>
                     </div>
                     <div className="col-4 mb-3">
-                        <a href=""><Image className="w-100" src="/images/news-110x110-5.jpg" alt="" width={110} height={110} /></a>
+                        <a href=""><Image className="w-auto" src="/images/news-110x110-5.jpg" alt="" width={110} height={110} /></a>
                     </div>
                     <div className="col-4 mb-3">
-                        <a href=""><Image className="w-100" src="/images/news-110x110-1.jpg" alt="" width={110} height={110} /></a>
+                        <a href=""><Image className="w-auto" src="/images/news-110x110-1.jpg" alt="" width={110} height={110} /></a>
                     </div>
                 </div>
             </div>
