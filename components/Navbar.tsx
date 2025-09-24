@@ -1,6 +1,6 @@
 import React from 'react'
-import Link from 'next/link'
 import { FaSearch } from "react-icons/fa"
+import NavBarLinks from './NavBarLinks'
 
 const Navbar = () => {
     return (
@@ -13,20 +13,7 @@ const Navbar = () => {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
-                    <div className="navbar-nav mr-auto py-0">
-                        <a href="index.html" className="nav-item nav-link active">Home</a>
-                        <Link href="/category" className="nav-item nav-link">Category</Link>
-                        <a href="single.html" className="nav-item nav-link">Single News</a>
-                        <div className="nav-item dropdown">
-                            <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
-                            <div className="dropdown-menu rounded-0 m-0">
-                                <a href="#" className="dropdown-item">Menu item 1</a>
-                                <a href="#" className="dropdown-item">Menu item 2</a>
-                                <a href="#" className="dropdown-item">Menu item 3</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" className="nav-item nav-link">Contact</a>
-                    </div>
+                    <NavBarLinks />
                     <div className="input-group ml-auto d-none d-lg-flex" style={{width: "100%", maxWidth: "300px"}}>
                         <input type="text" className="form-control border-0" placeholder="Keyword" />
                         <div className="input-group-append">

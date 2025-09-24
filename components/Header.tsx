@@ -6,7 +6,7 @@ const Header = () => {
         <div className="row align-items-center bg-white py-3 px-lg-5">
             <div className="col-lg-4">
                 <a href="index.html" className="navbar-brand p-0 d-none d-lg-block">
-                    <h1 className="m-0 display-4 text-uppercase text-primary">Biz<span className="text-secondary font-weight-normal">News</span></h1>
+                    <h1 className="m-0 display-4 text-uppercase text-primary">World<span className="text-secondary font-weight-normal">Beat</span></h1>
                 </a>
             </div>
             <div className="col-lg-8 text-center text-lg-right">

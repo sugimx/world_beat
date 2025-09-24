@@ -45,11 +45,12 @@ const Banner = () => {
                         <div className="position-relative">
                             <div className="position-relative overflow-hidden" style={{height: '500px'}}>
                                 <Image 
-                                    className="img-fluid h-100" 
+                                    className="img-fluid" 
                                     src={slides[currentSlide].src} 
                                     style={{ objectFit: 'cover' }} 
                                     alt="Banner" 
-                                    fill
+                                    width={2400}
+                                    height={1000}
                                 />
                                 <div className="overlay">
                                     <div className="mb-2">
