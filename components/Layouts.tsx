@@ -14,7 +14,7 @@ type LayoutProps = {
 
 const Layouts = ({ children }: LayoutProps) => {
     const currentPath = usePathname()
-    const isLoginPath = currentPath === '/login'
+    const isLoginPath = currentPath === '/login' || currentPath === '/signup'
     return (
         <>
             <div className="container-fluid d-none d-lg-block">

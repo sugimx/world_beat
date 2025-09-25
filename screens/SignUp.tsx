@@ -4,7 +4,7 @@ import { FcGoogle } from "react-icons/fc"
 import { FaFacebookF } from "react-icons/fa"
 import { FaApple } from "react-icons/fa"
 
-const Login = () => {
+const SignUp = () => {
     return (
         <>
             <div className='login--container'>
@@ -26,6 +26,15 @@ const Login = () => {
                         <span className='right--line'></span>
                     </div>
                     <div className='login--form'>
+                        <div className="login--input">
+                            <label>Enter your username</label>
+                            <input 
+                                type="text" 
+                                name="name"
+                                className='form-control'
+                                placeholder="John Doe" 
+                            />
+                        </div>
                        <div className="login--input">
                             <label>Enter your email address</label>
                             <input 
@@ -48,9 +57,9 @@ const Login = () => {
                     </div>
                     <div className='signin--container'>
                         <p>
-                            Don't have an account?
+                            Do you have an account?
                         </p>
-                        <Link href="/signup">Sign up</Link>
+                        <Link href="/login">Login</Link>
                     </div>
                 </div>
             </div>
@@ -58,4 +67,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default SignUp
