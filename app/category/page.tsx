@@ -1,12 +1,11 @@
-import Category from '@/screens/Category'
+import SingleCategory from '@/screens/SingleCategory'
 import React from 'react'
-
 const page = () => {
-  return (
-    <>
-        <Category />
-    </>
-  )
+    return (
+        <>
+            <SingleCategory />
+        </>
+    )
 }
 
 export default page
