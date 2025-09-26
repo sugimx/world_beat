@@ -38,7 +38,7 @@ const TopBar = () => {
                             <a className="nav-link text-body small" href="#">{daysOfWeekNames[day]}, {months[month]} {date}, {year}</a>
                         </li>
                         <li className="nav-item border-right border-secondary">
-                            <a className="nav-link text-body small" href="#">Contact</a>
+                            <Link className="nav-link text-body small" href="/contact">Contact</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link text-body small" href="/login">Login</Link>

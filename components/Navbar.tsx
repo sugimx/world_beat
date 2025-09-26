@@ -1,6 +1,6 @@
 import React from 'react'
-import { FaSearch } from "react-icons/fa"
 import NavBarLinks from './NavBarLinks'
+import SearchDataset from './SearchDataset'
 
 const Navbar = () => {
     return (
@@ -14,14 +14,7 @@ const Navbar = () => {
                 </button>
                 <div className="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
                     <NavBarLinks />
-                    <div className="input-group ml-auto d-none d-lg-flex" style={{width: "100%", maxWidth: "300px"}}>
-                        <input type="text" className="form-control border-0" placeholder="Keyword" />
-                        <div className="input-group-append">
-                            <button className="input-group-text bg-primary text-dark border-0 px-3">
-                                <FaSearch />
-                            </button>
-                        </div>
-                    </div>
+                    <SearchDataset />
                 </div>
             </nav>
         </div>

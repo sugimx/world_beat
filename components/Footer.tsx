@@ -1,10 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
-import { FaTwitter } from "react-icons/fa"
-import { FaFacebookF } from "react-icons/fa"
-import { FaLinkedinIn } from "react-icons/fa"
+import Link from 'next/link'
+import { BsTwitterX } from "react-icons/bs"
 import { FaInstagram } from "react-icons/fa"
 import { FaYoutube } from "react-icons/fa"
+import { FaLocationDot } from "react-icons/fa6"
+import { FaPhoneVolume } from "react-icons/fa6"
+import { MdEmail } from "react-icons/md"
 
 const Footer = () => {
     return (
@@ -12,24 +14,18 @@ const Footer = () => {
         <div className="row py-4">
             <div className="col-lg-3 col-md-6 mb-5">
                 <h5 className="mb-4 text-white text-uppercase font-weight-bold">Get In Touch</h5>
-                <p className="font-weight-medium"><i className="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
-                <p className="font-weight-medium"><i className="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-                <p className="font-weight-medium"><i className="fa fa-envelope mr-2"></i>info@example.com</p>
+                <p className="font-weight-medium"><FaLocationDot className='mb-1 mr-1' />86, Parakkai Road, Keezhavannanvilai, Nagercoil-2 629501</p>
+                <p className="font-weight-medium"><FaPhoneVolume className='mb-1 mr-1' /><a className="m-0 contact--info" href="tel:+918903301652">+91 8903301652</a></p>
+                <p className="font-weight-medium"><MdEmail className='mb-1 mr-1' /><a className="m-0 contact--info" href="mailto:support@sugimx.com">support@sugimx.com</a></p>
                 <h6 className="mt-4 mb-3 text-white text-uppercase font-weight-bold">Follow Us</h6>
                 <div className="d-flex justify-content-start">
-                    <a className="btn btn-lg btn-secondary btn-lg-square mr-2" href="#">
-                        <FaTwitter />
-                    </a>
-                    <a className="btn btn-lg btn-secondary btn-lg-square mr-2" href="#">
-                        <FaFacebookF />
-                    </a>
-                    <a className="btn btn-lg btn-secondary btn-lg-square mr-2" href="#">
-                        <FaLinkedinIn />
-                    </a>
+                    <Link className="btn btn-lg btn-secondary btn-lg-square mr-2" href="https://x.com/Sugimxinfo" target="_blank" rel="noopener noreferrer">
+                        <BsTwitterX />
+                    </Link>
                     <a className="btn btn-lg btn-secondary btn-lg-square mr-2" href="#">
                         <FaInstagram />
                     </a>
-                    <a className="btn btn-lg btn-secondary btn-lg-square" href="#">
+                    <a className="btn btn-lg btn-secondary btn-lg-square" href="https://www.youtube.com/@Sugimx" target='_blank' rel="noopener noreferrer">
                         <FaYoutube />
                     </a>
                 </div>
