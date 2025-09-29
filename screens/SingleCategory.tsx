@@ -23,7 +23,7 @@ const SingleCategory = () => {
                         <div className="col-lg-8">
                             <div className="row">
                                 <VerticalAdsBanner />
-                                <CategoryHeader name={category} />
+                                <CategoryHeader cat_name={category} />
                                 <LatestCard />
                             </div>
                         </div>

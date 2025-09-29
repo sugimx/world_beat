@@ -9,7 +9,7 @@ const Trending = () => {
         </div>
         <div className="bg-white border border-top-0 p-3">
             <div className="d-flex align-items-center bg-white mb-3" style={{height: '110px'}}>
-                <Image className="img-fluid" src="/images/news-110x110-1.jpg" alt="" width={110} height={110} />
+                <Image className="img-fluid" src="/images/news-110x110-1.jpg" alt="" width={110} height={110} priority />
                 <div className="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
                     <div className="mb-2">
                         <a className="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
@@ -19,7 +19,7 @@ const Trending = () => {
                 </div>
             </div>
             <div className="d-flex align-items-center bg-white mb-3" style={{height: '110px'}}>
-                <Image className="img-fluid" src="/images/news-110x110-2.jpg" alt="" width={110} height={110} />
+                <Image className="img-fluid" src="/images/news-110x110-2.jpg" alt="" width={110} height={110} priority />
                 <div className="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
                     <div className="mb-2">
                         <a className="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
@@ -29,7 +29,7 @@ const Trending = () => {
                 </div>
             </div>
             <div className="d-flex align-items-center bg-white mb-3" style={{height: '110px'}}>
-                <Image className="img-fluid" src="/images/news-110x110-3.jpg" alt="" width={110} height={110} />
+                <Image className="img-fluid" src="/images/news-110x110-3.jpg" alt="" width={110} height={110} priority />
                 <div className="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
                     <div className="mb-2">
                         <a className="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
@@ -39,7 +39,7 @@ const Trending = () => {
                 </div>
             </div>
             <div className="d-flex align-items-center bg-white mb-3" style={{height: '110px'}}>
-                <Image className="img-fluid" src="/images/news-110x110-4.jpg" alt="" width={110} height={110} />
+                <Image className="img-fluid" src="/images/news-110x110-4.jpg" alt="" width={110} height={110} priority />
                 <div className="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
                     <div className="mb-2">
                         <a className="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
@@ -49,7 +49,7 @@ const Trending = () => {
                 </div>
             </div>
             <div className="d-flex align-items-center bg-white mb-3" style={{height: '110px'}}>
-                <Image className="img-fluid" src="/images/news-110x110-5.jpg" alt="" width={110} height={110} />
+                <Image className="img-fluid" src="/images/news-110x110-5.jpg" alt="" width={110} height={110} priority />
                 <div className="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
                     <div className="mb-2">
                         <a className="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>

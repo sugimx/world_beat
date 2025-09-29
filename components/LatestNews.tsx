@@ -10,16 +10,50 @@ import LandscapeCard from '@/components/LandscapeCard'
 import LandscapeBigCard from '@/components/LandscapeBigCard'
 import CategoryHeader from './CategoryHeader'
 import VerticalAdsBanner from './VerticalAdsBanner'
+import { fetchPostData } from '@/api/postAPI'
 
-const LatestNews = () => {
+type postProps = {
+    archives?: boolean
+    category_id: {
+        id: number
+        cat_name: string
+    }
+    _id?: string
+    createdAt?: string 
+    description?: string
+    image?: string
+    profile_id?: string
+    title?: string
+    updatedAt?: string
+}
+
+
+const LatestNews = async () => {
+    const data = await fetchPostData()
+    const posts = data?.data?.posts?.slice(0, 6)
+
+    if(!posts) return <p>No post available</p>
+
     return (
         <div className="container-fluid">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-8">
                         <div className="row">
-                            <CategoryHeader name={"Latest News"} />
-                            <LatestCard />
+                            <CategoryHeader cat_name={"Latest News"} />
+                            {
+                                posts && posts?.map((post: postProps) => (
+                                    <div className="col-lg-6" key={post._id}>
+                                        <LatestCard 
+                                            title={post.title} 
+                                            ids={post._id} 
+                                            isoString={post.createdAt} 
+                                            description={post.description} 
+                                            catagory={post.category_id.cat_name}
+                                        />
+                                    </div>
+                                ))
+                            }
                            
                             <VerticalAdsBanner />
                             <div className="col-lg-6">
