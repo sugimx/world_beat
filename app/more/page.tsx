@@ -1,10 +1,12 @@
 import MoreCategory from '@/screens/MoreCategory'
 import React from 'react'
 
-const page = () => {
+const page = async ({ searchParams }: {searchParams: { page?: string }}) => {
+  const params = await searchParams
+  const page = params.page || "1"
   return (
     <>
-        <MoreCategory />
+        <MoreCategory page={page} />
     </>
   )
 }

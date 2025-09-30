@@ -1,13 +1,20 @@
+"use client"
+
 import React from 'react'
 import { Pagination } from 'react-bootstrap'
+import { useRouter } from 'next/navigation'
 
 interface PaginationSectionProps {
     currentPage: number
     totalPages: number
-    onPageChange: (page: number) => void
 }
 
-const PaginationSection: React.FC<PaginationSectionProps> = ({ currentPage, totalPages, onPageChange }) => {
+const PaginationSection: React.FC<PaginationSectionProps> = ({ currentPage, totalPages }) => {
+    const router = useRouter()
+
+    const handlePageChange = (page: number) => {
+        router.push(`?page=${page}`)
+    } 
     const pageItems = []
 
     let startPage = Math.max(1, currentPage - 2)
@@ -22,7 +29,7 @@ const PaginationSection: React.FC<PaginationSectionProps> = ({ currentPage, tota
 
     if (startPage > 1) {
         pageItems.push(
-            <Pagination.Item key={1} onClick={() => onPageChange(1)}>{1}</Pagination.Item>
+            <Pagination.Item key={1} onClick={() => handlePageChange(1)}>{1}</Pagination.Item>
         )
         if (startPage > 2) {
             pageItems.push(<Pagination.Ellipsis key="start-ellipsis" disabled />)
@@ -35,7 +42,7 @@ const PaginationSection: React.FC<PaginationSectionProps> = ({ currentPage, tota
                 key={page}
                 active={page === currentPage}
                 activeLabel=''
-                onClick={() => onPageChange(page)}
+                onClick={() => handlePageChange(page)}
             >
                 {page}
             </Pagination.Item>
@@ -47,19 +54,19 @@ const PaginationSection: React.FC<PaginationSectionProps> = ({ currentPage, tota
             pageItems.push(<Pagination.Ellipsis key="end-ellipsis" disabled />)
         }
         pageItems.push(
-            <Pagination.Item key={totalPages} onClick={() => onPageChange(totalPages)}>{totalPages}</Pagination.Item>
+            <Pagination.Item key={totalPages} onClick={() => handlePageChange(totalPages)}>{totalPages}</Pagination.Item>
         )
     }
 
     return (
         <Pagination>
             <Pagination.Prev 
-                onClick={() => onPageChange(Math.max(1, currentPage - 1))}
+                onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
                 disabled={currentPage === 1}
             />
             {pageItems}
             <Pagination.Next 
-                onClick={() => onPageChange(Math.min(totalPages, currentPage + 1))}
+                onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
                 disabled={currentPage === totalPages}
             />
         </Pagination>

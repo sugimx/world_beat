@@ -7,7 +7,6 @@ import Footer from './Footer'
 import Loading from '@/app/loading'
 import { Suspense } from 'react'
 import { usePathname } from 'next/navigation'
-import QueryProvider from '@/provider/QueryProvider'
 
 type LayoutProps = {
     children: ReactNode
@@ -24,9 +23,7 @@ const Layouts = ({ children }: LayoutProps) => {
             </div>
             {!isLoginPath && (<Navbar />)}
             <Suspense fallback={ <Loading /> }>
-                <QueryProvider>
-                    {children}
-                </QueryProvider>
+                {children}
             </Suspense>
             {!isLoginPath && (<Footer />)}
         </>

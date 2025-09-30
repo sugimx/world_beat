@@ -1,7 +1,4 @@
-"use client"
-
-import React, { useState } from 'react'
-import { useQuery } from '@tanstack/react-query'
+import React from 'react'
 import Advertisement from '@/components/Advertisement'
 import CategoryHeader from '@/components/CategoryHeader'
 import LatestCard from '@/components/LatestCard'
@@ -13,24 +10,18 @@ import VerticalAdsBanner from '@/components/VerticalAdsBanner'
 import { fetchPostData } from '@/api/postAPI'
 import PaginationSection from '@/components/PaginationSection'
 
-const MoreCategory = () => {
-    const [currentPage, setCurrentPage] = useState(1)
-    const { data, isLoading, error } = useQuery({
-        queryKey: ['posts'],
-        queryFn: fetchPostData
-    })
+type MoreCategoryProps = {
+    page?: string
+}
 
-    if(isLoading) return <div>Loading...</div>
-    if(error instanceof Error) return <div>Error: {error.message}</div>
+const MoreCategory = async ({ page }: MoreCategoryProps) => {
+    const currentPage = parseInt(page || "1")
+    const data = await fetchPostData()
 
     const POSTS_PER_PAGE = 4
     const TOTAL_POSTS = data && data?.data?.posts?.length
     const totalPages = Math.ceil(TOTAL_POSTS / POSTS_PER_PAGE)
     const allPosts = data?.data?.posts || []
-    
-    const handlePageChange = (page: number) => {
-        setCurrentPage(page)
-    }
 
     const startIdx = (currentPage - 1) * POSTS_PER_PAGE
     const endIdx = startIdx + POSTS_PER_PAGE
@@ -59,7 +50,6 @@ const MoreCategory = () => {
                             <PaginationSection 
                                 currentPage={currentPage} 
                                 totalPages={totalPages} 
-                                onPageChange={handlePageChange} 
                             />
                             <VerticalAdsBanner />
                         </div>
