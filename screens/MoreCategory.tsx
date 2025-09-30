@@ -17,7 +17,7 @@ type MoreCategoryProps = {
 const MoreCategory = async ({ page }: MoreCategoryProps) => {
     const currentPage = parseInt(page || "1")
     const data = await fetchPostData()
-
+    
     const POSTS_PER_PAGE = 4
     const TOTAL_POSTS = data && data?.data?.posts?.length
     const totalPages = Math.ceil(TOTAL_POSTS / POSTS_PER_PAGE)

@@ -1,5 +1,3 @@
-"use client"
-
 import React from 'react'
 import Image from 'next/image'
 import CommandSection from '@/components/CommandSection'
@@ -7,7 +5,6 @@ import SocialFollow from '@/components/SocialFollow'
 import Advertisement from '@/components/Advertisement'
 import Trending from '@/components/Trending'
 import CommandForm from '@/components/CommandForm'
-import { useQuery } from '@tanstack/react-query'
 import { fetchSinglePost } from '@/api/postAPI'
 import dateFormatter from '@/lib/dateFormatter'
 
@@ -15,14 +12,9 @@ type SinglePostProps = {
     datas: string
 }
 
-const SinglePost = ({ datas }: SinglePostProps) => {
-    const { data, isLoading, isError } = useQuery({
-        queryKey: ['post'],
-        queryFn: () => fetchSinglePost(datas)
-    })
-
-    if(isLoading) return <div>Loading...</div>
-    if(isError) return <div>Error occurred while fetching data.</div>
+const SinglePost = async ({ datas }: SinglePostProps) => {
+    const data = await fetchSinglePost(datas)
+    console.log(data)
    
     return (
         <div className="container-fluid">

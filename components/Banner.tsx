@@ -10,7 +10,7 @@ const Banner = () => {
         {
             id: 1,
             src: "/images/news-800x500-1.jpg",
-            category: "Business",
+            category: "Business 1",
             date: "Jan 01, 2045",
             title: "Lorem ipsum dolor sit amet elit. Proin vitae porta diam..."
         },
